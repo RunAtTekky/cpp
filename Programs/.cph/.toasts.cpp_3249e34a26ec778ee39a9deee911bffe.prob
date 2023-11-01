@@ -1,0 +1,1 @@
+{"name":"Local: toasts","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\Programs\\toasts.cpp","tests":[{"id":1695897644382,"input":"3 4 5 10 8 100 3 1","output":"2"},{"id":1695898112157,"input":"1 4 5 5 3 10 3 1","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\Programs\\toasts.cpp","group":"local","local":true}

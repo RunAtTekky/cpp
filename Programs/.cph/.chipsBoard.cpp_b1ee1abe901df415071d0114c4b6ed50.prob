@@ -1,0 +1,1 @@
+{"name":"Local: chipsBoard","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\Programs\\chipsBoard.cpp","tests":[{"id":1696441537452,"input":"1\n7\n3 8 2 8 4 8 10\n1 8 5 3 3 3 2","output":"39"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\Programs\\chipsBoard.cpp","group":"local","local":true}
