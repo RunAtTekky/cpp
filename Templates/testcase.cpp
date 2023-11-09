@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include <climits>
 #include <algorithm>
 #include <numeric>
@@ -11,28 +12,33 @@ using namespace std;
 #define printab(a,b) cout << a << " " << b << "\n";
 
 ll n,m,k;
-string s;
-char ch;
+string s; char ch;
 const int N = 100005;
-ll arr[N];
-vector<int> v(N);
 
-void func() {
-    for (int i=0; i<n; i++) {
-        cin >> arr[i];
-    }
+vector<int> readVector(int n) {
+    vector<int> v(n);
     for (int i=0; i<n; i++) {
         cin >> v[i];
     }
+    return v;
+}
+void printVector(vector<int> v) {
+    for (int i=0; i<v.size(); i++) {
+        cout << v[i] << " ";
+    }
+}
+
+void solve() {
+    cin >> n;
 }
 
 
 int main() {
-    int t;
-    cin >> t;
+    int tests;
+    cin >> tests;
     
-    while (t--) {
-        func();
+    while (tests--) {
+        solve();
     }
     
     return 0;
