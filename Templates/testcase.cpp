@@ -21,12 +21,7 @@ void solve() {
 
 
 int main() {
-    int tests;
-    cin >> tests;
-    
-    while (tests--) {
-        solve();
-    }
-    
+    int tests; cin >> tests;
+    while (tests--) solve();
     return 0;
 }
