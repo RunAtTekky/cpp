@@ -1,4 +1,8 @@
+/*
+    RunAt - grey
+*/
 #include <iostream>
+#include <set>
 #include <map>
 #include <climits>
 #include <algorithm>
@@ -13,7 +17,6 @@ using namespace std;
 
 const int N = 100005;
 
-
 void solve() {
     ll n;
     cin >> n;
@@ -21,7 +24,8 @@ void solve() {
 
 
 int main() {
-    int tests; cin >> tests;
+    int tests = 1;
+    cin >> tests;
     while (tests--) solve();
     return 0;
 }
