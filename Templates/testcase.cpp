@@ -7,11 +7,11 @@
 #include <climits>
 #include <algorithm>
 #include <numeric>
-#include <string>
 #include <vector>
+#include <string>
 using namespace std;
 
-#define ll long long
+typedef int long long ll;
 #define printnl(a) cout << a << "\n";
 #define printab(a,b) cout << a << " " << b << "\n";
 
