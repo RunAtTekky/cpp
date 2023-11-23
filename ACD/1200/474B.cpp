@@ -16,18 +16,14 @@ void solve() {
     vector<ll> piles(n);
     ll prev = 0;
     for (auto &i : piles) {
-        
         cin >> i;
         i += prev;
         prev = i;
-
     } 
 
     ll m; cin >> m;
-    vector<ll> juicyWorms(m);
-    for (auto &i : juicyWorms) cin >> i;
-
-    for (auto &t : juicyWorms) {
+    while (m--) {
+        int t; cin >> t;
         auto index = lower_bound(piles.begin(),piles.end(),t) - piles.begin();
         printnl(index+1);
     }
