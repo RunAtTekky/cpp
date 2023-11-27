@@ -25,9 +25,9 @@ void solve() {
     bool isB = false;
     bool isC = false;
 
-    if (abs(b-c)%2 == 0 && abs(b-c)/2 <= a) isA = true;
-    if (abs(a-c)%2 == 0 && abs(a-c)/2 <= b) isB = true;
-    if (abs(b-a)%2 == 0 && abs(b-a)/2 <= c) isC = true;
+    if (abs(b-c)%2 == 0) isA = true;
+    if (abs(a-c)%2 == 0) isB = true;
+    if (abs(b-a)%2 == 0) isC = true;
 
     cout << isA << " " << isB << " " << isC << "\n";
 }
