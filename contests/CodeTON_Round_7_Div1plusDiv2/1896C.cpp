@@ -2,13 +2,9 @@
     RunAt - grey
 */
 #include <iostream>
-#include <set>
-#include <map>
-#include <climits>
 #include <algorithm>
 #include <numeric>
 #include <vector>
-#include <string>
 using namespace std;
 
 typedef int long long ll;
@@ -34,16 +30,16 @@ void solve() {
                 return a[l] < a[r];
                 });
 
-    for (auto &e : a) cout << e << " ";
-    cout << "\n";
-    for (auto &e : b) cout << e << " ";
-    cout << "\n";
-    for (auto &e : aid) cout << e << " ";
-    cout << "\n";
+    // for (auto &e : a) cout << e << " ";
+    // cout << "\n";
+    // for (auto &e : b) cout << e << " ";
+    // cout << "\n";
+    // for (auto &e : aid) cout << e << " ";
+    // cout << "\n";
 
     sort(b.begin(), b.end());
-    for (auto &e : b) cout << e << " ";
-    cout << "\n";
+    // for (auto &e : b) cout << e << " ";
+    // cout << "\n";
     vector<ll> ans(n);
     for (int i=0; i<x; i++) {
         ans[aid[n-x+i]] = b[i];
