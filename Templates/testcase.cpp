@@ -5,15 +5,19 @@
 #include <set>
 #include <map>
 #include <climits>
-#include <algorithm>
-#include <numeric>
-#include <vector>
 #include <string>
+#include <numeric>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 typedef int long long ll;
 #define printnl(a) cout << a << "\n";
 #define printab(a,b) cout << a << " " << b << "\n";
+#define readV(vec) for (auto &e: vec) cin >> e;
+#define debugV(vec) for (auto &e: vec) {cout << e << " ";} cout << "\n";
+#define YES cout << "YES" << "\n"
+#define NO cout << "NO" << "\n"
 
 const int N = 100005;
 
