@@ -1,9 +1,10 @@
 #include <iostream>
+#include <numeric>
 #include <algorithm>
 using namespace std;
 
 int main() {
-    cout << __gcd(3,4);
+    cout << std::gcd(20,18);
     // int n,b;
     // cin >> n >> b;
 
@@ -16,4 +17,6 @@ int main() {
     //     cout << "hey" << endl;
     //     cout << "hey how are you" << endl;
     // }
+    // This is gonna be a hell of a ride
+    
 }
