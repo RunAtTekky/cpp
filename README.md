@@ -1,1 +1,1 @@
-Practicing Competetive Programming and also learning data structures and algorithms.
+Practicing Competitive Programming and also learning data structures and algorithms.
