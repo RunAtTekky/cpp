@@ -21,99 +21,19 @@ typedef int long long ll;
 
 const int N = 100005;
 
-ll getMaxTasks(ll n) {
-    if (n%7 == 0) return n/7;
-    return n/7 + 1;
-}
-
 void solve() {
     ll n, P, l, t;
     cin >> n >> P >> l >> t;
 
-    ll maxTasks = getMaxTasks(n);
-    ll pointsInOneDayForTwo = l + 2*t;
-    ll pointsInOneDayForOne = l + t;
+    ll tasks = (n+6)/7;
+    ll s = 0; ll e = n+1;
 
-    ll points = 0;
-    // points = pointsInOneDayForTwo*(maxTasks/2);
-    // points += (maxTasks%2 == 1) ? pointsInOneDayForOne : 0;
-
-    // printnl(getMaxTasks(n));
-    ll days = 0;
-
-    ll doubleDays = maxTasks/2;
-
-    ll tempPo = doubleDays*pointsInOneDayForTwo;
-    
-    tempPo += (maxTasks%2 == 1) ? pointsInOneDayForOne : 0;
-
-
-
-    if (tempPo < P) {
-        ll po = P - tempPo;
-        days = doubleDays;
-        days += (po%l) ? po/l + 1 : po/l;
-        // printnl(n-days);
+    while (s+1<e) {
+        ll mid = s + (e-s)/2;
+        (mid*l + min(2*mid,tasks)*t >= P) ? (e = mid) : (s = mid);
     }
-    else {
-        if (pointsInOneDayForTwo*doubleDays >= P) {
-            if (P%pointsInOneDayForTwo == 0) {
-                days += P/pointsInOneDayForTwo;
-            } else days += P/pointsInOneDayForTwo + 1;
-        }
-        else {
-            ll temp = doubleDays*pointsInOneDayForTwo;
 
-            if ((P-temp)%pointsInOneDayForOne == 0) {
-                days += P-temp/pointsInOneDayForOne;
-            }
-            else {
-                days += P-temp/pointsInOneDayForOne + 1;
-            }
-            // while (doubleDays*pointsInOneDayForTwo )
-            // if (doubleDays == 0) {
-            //     days++;
-            // }
-            // else {
-
-            //     if (P%pointsInOneDayForTwo == 0) {
-            //         days += P/pointsInOneDayForTwo;
-            //     } else days += P/pointsInOneDayForTwo + 1;
-            //     days++;
-            // }
-        }
-    }
-    printnl(n-days);
-     
-    // while (maxTasks != 0 && maxTasks != 1) {
-    //     points += pointsInOneDayForTwo;
-    //     days++;
-    //     maxTasks -= 2;
-    //     // printnl(points);
-    //     // printnl(maxTasks);
-    //     if (points >= P) {
-    //         printnl(n-days); return;
-    //     }
-    // }
-    // // printnl(days);
-    // if (maxTasks == 1) {
-    //     points += pointsInOneDayForOne;
-    //     days++;
-    //     if (points >= P) {
-    //         printnl(n-days); return;
-    //     }
-    // }
-    // // printnl(days);
-
-    // // days += (P-points)/l;
-    // days += ((P-points)%l == 0) ? (P-points)/l : (P-points)/l + 1;
-    // // printnl(days);
-    // printnl(n-days);
-
-
-
-    // printnl(n-daysToStudy);
-
+    printnl(n-e);
 }
 
 
