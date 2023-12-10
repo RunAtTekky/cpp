@@ -1,0 +1,1 @@
+{"name":"Local: demo","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\demo.cpp","tests":[{"id":1702117064109,"input":"5 c\ncbcec","output":""},{"id":1702117175139,"input":"1 b\nc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\demo.cpp","group":"local","local":true}

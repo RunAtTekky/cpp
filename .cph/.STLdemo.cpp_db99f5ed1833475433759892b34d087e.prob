@@ -1,0 +1,1 @@
+{"name":"Local: STLdemo","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\STLdemo.cpp","tests":[{"id":1702191320315,"input":"4\n1 4 4 4","output":"1 5 9 13\n13\n3\n1 3 0 0\n1 4"},{"id":1702193100215,"input":"5\n5 4 3 4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\STLdemo.cpp","group":"local","local":true}
