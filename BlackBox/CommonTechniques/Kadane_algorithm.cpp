@@ -6,7 +6,7 @@ using namespace std;
 
 // Kadane's Algorithm - Maximum Subarray Sum
 ll maxSubArraySum(vector<ll> a) {
-    ll size = a.size();
+  ll size = a.size();
 	ll max_so_far = LLONG_MIN, max_ending_here = 0;
 
 	for (ll i = 0; i < size; i++) {

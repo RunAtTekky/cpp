@@ -2,11 +2,6 @@
     RunAt - grey
 */
 #include <iostream>
-#include <set>
-#include <map>
-#include <climits>
-#include <string>
-#include <numeric>
 #include <algorithm>
 #include <vector>
 using namespace std;
