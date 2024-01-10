@@ -2,6 +2,7 @@
 using namespace std;
 
 void solve() {
+  cout << "Hello brother" << "\n";
 
 }
 
