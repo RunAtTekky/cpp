@@ -15,7 +15,7 @@ typedef int long long ll;
 #define p(a) cout << a << "\n";
 #define p2(a,b) cout << a << " " << b << "\n";
 #define readV(vec) for (auto &e: vec) cin >> e;
-#define debugV(vec) for (auto &e: vec) {cout << e << " ";} cout << "\n";
+#define printV(vec) for (auto &e: vec) {cout << e << " ";} cout << "\n";
 #define YES cout << "YES" << "\n"
 #define NO cout << "NO" << "\n"
 
