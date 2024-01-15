@@ -1,0 +1,77 @@
+{
+	// Place your cpp workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+"template_for_CP": {
+  "prefix": "runat",
+  "body": [
+    "/*",
+    "    RunAt - grey",
+    "*/",
+    "#include <iostream>",
+    "#include <set>",
+    "#include <map>",
+    "#include <climits>",
+    "#include <string>",
+    "#include <numeric>",
+    "#include <algorithm>",
+    "#include <vector>",
+    "using namespace std;",
+    "",
+    "typedef int long long ll;",
+    "#define p(a) cout << a << \"\\n\";",
+    "#define p2(a,b) cout << a << \" \" << b << \"\\n\";",
+    "#define readV(vec) for (auto &e: vec) cin >> e;",
+    "#define printV(vec) for (auto &e: vec) {cout << e << \" \";} cout << \"\\n\";",
+    "#define YES cout << \"YES\" << \"\\n\"",
+    "#define NO cout << \"NO\" << \"\\n\"",
+    "",
+    "const int N = 100005;",
+    "",
+    "void solve() {",
+    "    ll ${1:n};",
+    "    cin >> n;",
+    "}",
+    "",
+    "int main() {",
+    "    int tests = 1;",
+    "    cin >> tests;",
+    "    while (tests--) solve();",
+    "    return 0;",
+    "}",
+    ""
+  ],
+  "description": "template_for_CP"
+}
+"vector input (long long)": {
+  "prefix": "vll",
+  "body": [
+    "vector<long long> vec(n);",
+    "for (auto &e: vec) cin >> e;"
+	""
+  ],
+  "description": "vector input (long long)"
+}
+"vector print (long long)": {
+  "prefix": "vllp",
+  "body": [
+    "for (auto &e: vec) cout << e << \" \";",
+    "cout << \"\\n\";",
+    ""
+  ],
+  "description": "vector print (long long)"
+}
+}
