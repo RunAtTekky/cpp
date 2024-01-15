@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 using namespace std;
 
@@ -20,13 +21,24 @@ ll maxSubArraySum(vector<ll> a) {
 	return max_so_far;
 }
 
+long long maxSubArraySumDP(vector<long long> &v) {
+	long long res = INT_MIN;
+	long long prev = v[0];
+	for (int i=1; i<v.size(); i++) {
+		long long curr = max(prev + v[i], v[i]);
+		prev = curr;
+		res = max(res,curr);
+	}
+	return res;
+}
+
 // Driver Code
 int main()
 {
 	vector<ll> a;
     a = { -2, -3, 4, -1, -2, 1, 5, -3 };
 
-	ll max_sum = maxSubArraySum(a);
+	ll max_sum = maxSubArraySumDP(a);
 	cout << "Maximum contiguous sum is " << max_sum;
 	return 0;
 }

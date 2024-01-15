@@ -15,7 +15,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-"template_for_CP": {
+"codeforces_CP_template": {
   "prefix": "runat",
   "body": [
     "/*",
@@ -42,19 +42,39 @@
     "const int N = 100005;",
     "",
     "void solve() {",
-    "    ll ${1:n};",
-    "    cin >> n;",
+    "    ll ${2:n};",
+    "    cin >> ${3:n};",
+    "    $0",
     "}",
     "",
     "int main() {",
     "    int tests = 1;",
-    "    cin >> tests;",
+    "    cin >> tests;${1:}",
     "    while (tests--) solve();",
     "    return 0;",
     "}",
     ""
   ],
-  "description": "template_for_CP"
+  "description": "codeforces_CP_template"
+}
+"minimal_CP_submit": {
+  "prefix": "basic",
+  "body": [
+    "#include <iostream>",
+    "using namespace std;",
+    "",
+    "int main() {",
+    "    int t = 1;",
+    "    cin >> t;${1:}",
+    "    while (t--) {",
+    "        long long ${2:n};",
+    "        cin >> ${3:n};",
+    "        $0",
+    "    }",
+    "}",
+    ""
+  ],
+  "description": "minimal_CP_submit"
 }
 "vector input (long long)": {
   "prefix": "vll",
@@ -73,5 +93,21 @@
     ""
   ],
   "description": "vector print (long long)"
+}
+"Maximum_SubArray_Sum_Using_DP": {
+  "prefix": "kadane",
+  "body": [
+    "long long maxSubArraySumDP(vector<long long> &v) {",
+    "	long long res = INT_MIN;",
+    "	long long prev = v[0];",
+    "	for (int i=1; i<v.size(); i++) {",
+    "		long long curr = max(prev + v[i], v[i]);",
+    "		prev = curr;",
+    "		res = max(res,curr);",
+    "	}",
+    "	return res;",
+    "}"
+  ],
+  "description": "Maximum_SubArray_Sum_Using_DP"
 }
 }
