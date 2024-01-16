@@ -1,1 +1,0 @@
-{"name":"Local: AbutBetter","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\AbutBetter.cpp","tests":[{"id":1699030740516,"input":"3\n5 7 2\n10 5 0\n5 8 2\n","output":"7\n10\n9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\AbutBetter.cpp","group":"local","local":true}

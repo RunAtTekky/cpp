@@ -1,1 +1,0 @@
-{"name":"Local: lambda","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\lambda.cpp","tests":[{"id":1702194667588,"input":"20\nvarun","output":"@1: Name is: varun and age is: 20\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\lambda.cpp","group":"local","local":true}

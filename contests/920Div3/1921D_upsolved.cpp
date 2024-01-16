@@ -2,8 +2,8 @@
     RunAt - grey
 */
 #include <iostream>
-#include <set>
 #include <cmath>
+#include <set>
 #include <map>
 #include <climits>
 #include <string>
@@ -25,49 +25,37 @@ const int N = 100005;
 void solve() {
     ll n,m;
     cin >> n >> m;
-
+    
     vector<long long> vec(n);
     for (auto &e: vec) cin >> e;
     
     vector<long long> vec2(m);
     for (auto &e: vec2) cin >> e;
-
+    
     sort(vec.begin(), vec.end());
     sort(vec2.begin(), vec2.end());
 
-    reverse(vec2.begin(), vec2.begin() + n/2);
-    reverse(vec2.begin() + m - n/2, vec2.begin() + m);
-
-    // for (auto &e: vec) cout << e << " ";
-    // cout << "\n";
-
-    for (auto &e: vec2) cout << e << " ";
-    cout << "\n";
-
-    for (int i=0; i<n/2; i++) {
-        swap(vec2[i],vec2[m-n/2+i]);
-    }
-
-    // for (auto &e: vec2) cout << e << " ";
-    // cout << "\n";
-
-    vec2.erase(vec2.begin()+ceil(double(n)/2), vec2.begin() + m - n/2);
-
-    for (auto &e: vec2) cout << e << " ";
-    cout << "\n";
-
+    int l1 = 0, r1 = n-1;
+    int l2 = 0, r2 = m-1;
 
     ll ans = 0;
-    for (int i=0; i<n; i++) {
-        ans += abs(vec[i]-vec2[i]);
+    while (l1<=r1) {
+        ll lDiff = abs(vec[l1]-vec2[r2]);
+        ll rDiff = abs(vec[r1]-vec2[l2]);
+
+        // For some reason it doesn't matter if I put the
+        // equals to condition or not.
+        if (lDiff < rDiff) {
+            ans += rDiff;
+            r1--; l2++;
+        }
+        else {
+            ans += lDiff;
+            l1++; r2--;
+        }
     }
     p(ans);
 
-    
-    
-
-    
-    
 }
 
 int main() {
