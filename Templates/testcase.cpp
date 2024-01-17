@@ -18,7 +18,7 @@ typedef int long long ll;
 #define YES cout << "YES" << "\n"
 #define NO cout << "NO" << "\n"
 
-const int N = 100005;
+const int N = 1e5+5;
 const int MOD = 1e9+7;
 
 void solve() {
