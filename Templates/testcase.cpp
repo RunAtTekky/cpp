@@ -22,13 +22,13 @@ const int N = 1e5+5;
 const int MOD = 1e9+7;
 
 void solve() {
-    ll n;
-    cin >> n;
+  ll n;
+  cin >> n;
 }
 
 int main() {
-    int tests = 1;
-    cin >> tests;
-    while (tests--) solve();
-    return 0;
+  int tests = 1;
+  cin >> tests;
+  while (tests--) solve();
+  return 0;
 }
