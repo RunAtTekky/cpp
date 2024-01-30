@@ -1,5 +1,5 @@
 /*
-    RunAt - green
+    RunAt - grey
 */
 #include <iostream>
 #include <set>
@@ -22,8 +22,15 @@ const int N = 1e5+5;
 const int MOD = 1e9+7;
 
 void solve() {
-  ll n;
-  cin >> n;
+  ll n,k;
+  cin >> n >> k;
+
+  for (int j=0; j<n; j++) {
+    for (int i=0; i<k; i++) {
+      cout << char(97+i);
+    }
+  }
+  cout << "\n";
 }
 
 int main() {
