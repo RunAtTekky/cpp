@@ -22,37 +22,29 @@ const int N = 1e5+5;
 const int MOD = 1e9+7;
 
 void solve() {
-  ll n;
-  cin >> n;
+  ll n,k;
+  cin >> n >> k;
 
-  vector<ll> vec(n+1);
-  for (int i=1; i<=n; i++) {
-    cin >> vec[i];
+  vector<long long> vec(n);
+  for (auto &e: vec) cin >> e;
+  
+  vector<ll> notGood;
+  for (int i=1; i<n; i++) {
+    if (vec[i]*2 <= vec[i-1]) {
+      notGood.push_back(i);
+    }
   }
 
-  ll q; cin >> q;
-  for (int i=1; i<=q; i++) {
-    ll l,r; cin >> l >> r;
-    map<ll,ll> freq;
-    int f=-1;
-    int s=-1;
-    for (int j=l; j<=r; j++) {
-      if (freq.size() == 0) {
-        f = j;
-        freq[vec[j]]++;
-      }
-      if(freq.size() == 1 && freq[vec[j]]++ == 0) {
-        s = j;
-      }
-    }
-    if (freq.size() >= 2) {
-      p2(l,s);
-    }
-    else {
-      p2(-1,-1);
+  ll ans = 0;
+  for (int i=0; i+k<n; i++) {
+    auto it = upper_bound(notGood.begin(), notGood.end(), i);
+    if (it == notGood.end()) {ans++; continue;}
+    if ((*it) > i+k) {
+      ans++;
     }
   }
-  cout << "\n";
+  p(ans);
+
 }
 
 int main() {
