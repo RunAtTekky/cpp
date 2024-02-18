@@ -1,13 +1,13 @@
 /*
-  RunAt - green
+    RunAt - green
 */
 #include <iostream>
 #include <set>
 #include <climits>
-#include <string>
-#include <numeric>
 #include <cmath>
+#include <numeric>
 #include <map>
+#include <string>
 #include <algorithm>
 #include <vector>
 using namespace std;
@@ -24,24 +24,25 @@ const int MOD = 1e9+7;
 void solve() {
   ll n;
   cin >> n;
-  
+
   vector<long long> vec(n);
-  for (auto &e: vec) cin >> e;
-  
-  map<ll,ll> mp;
-  vector<ll> present(N);
-  vector<ll> v;
-  for (int i=0; i<n; i++) {
-    ll X = vec[i]+i+1;
-    while(mp[X]) X--;
-    v.push_back(X);
-    mp[X]++;
+  for (int i=1; i<=n; i++) {
+    ll ele; cin >> ele;
+    vec[i-1] = ele + i;
   }
-  
-  sort(v.begin(), v.end());
-  for (int i=v.size()-1; i>=0; i--) {
-    cout << v[i] << " ";
+
+  sort(vec.begin(), vec.end(), [](auto x, auto y) {
+    return x>y;
+  });
+
+  int i=0; 
+  while (i+1<n) {
+    if (vec[i] <= vec[i+1]) {
+      vec[i+1] = vec[i]-1;
+    }
+    i++;
   }
+  for (auto &e: vec) cout << e << " ";
   cout << "\n";
   
 }
