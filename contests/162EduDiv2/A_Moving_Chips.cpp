@@ -1,13 +1,13 @@
 /*
-  RunAt - green
+    RunAt - green
 */
 #include <iostream>
 #include <set>
 #include <climits>
-#include <string>
-#include <numeric>
 #include <cmath>
+#include <numeric>
 #include <map>
+#include <string>
 #include <algorithm>
 #include <vector>
 using namespace std;
@@ -21,29 +21,32 @@ typedef int long long ll;
 const int N = 1e5+5;
 const int MOD = 1e9+7;
 
-
-vector<int> factArr(N);
-// vector<long long> factArr(N);
-void fact() {
-  long long res = 1;
-  for (int i=1; i<=N; i++) {
-    res = (res*i)%MOD;
-    factArr[i] = res;
-  }
-}
-
 void solve() {
   ll n;
   cin >> n;
 
-  p(factArr[n]);
-
+  vector<long long> vec(n);
+  for (auto &e: vec) cin >> e;
   
+  ll count = 0;
+
+  int i=0;
+  while (i<n && vec[i] != 1) {
+    i++;
+  }
+  int j=n-1;
+  while (j>=0 && vec[j] != 1) {
+    j--;
+  }
+
+  for (int k=i; k<=j; k++) {
+    if (vec[k] == 0) count++;
+  }
+  p(count);
 }
 
 int main() {
   int tests = 1;
-  fact();
   cin >> tests;
   while (tests--) solve();
   return 0;
