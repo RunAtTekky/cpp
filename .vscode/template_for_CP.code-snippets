@@ -87,6 +87,8 @@
     "}",
     "",
     "int main() {",
+    "  cin.sync_with_stdio(0);"
+    "  cin.tie(0);"
     "  int tests = 1;",
     "  cin >> tests;${1:}",
     "  while (tests--) solve();",
@@ -137,7 +139,7 @@
   "prefix": "kadane",
   "body": [
     "long long maxSubArraySumDP(vector<long long> &v) {",
-    "	long long res = INT_MIN;",
+    "	long long res = v[0];",
     "	long long prev = v[0];",
     "	for (int i=1; i<v.size(); i++) {",
     "		long long curr = max(prev + v[i], v[i]);",
