@@ -7,6 +7,7 @@
 #include <cmath>
 #include <numeric>
 #include <map>
+#include <unordered_map>
 #include <string>
 #include <algorithm>
 #include <vector>
@@ -24,6 +25,35 @@ const int MOD = 1e9+7;
 void solve() {
   ll n;
   cin >> n;
+
+  map<string, bool> mp;
+
+  vector<string> vec(n);
+  for (int i=0; i<n; i++) {
+    cin >> vec[i];
+    mp[vec[i]] = true;
+  }
+
+  for (auto x: vec) {
+    string curr = x;
+    bool found = false;
+
+    int m = curr.size();
+    for (int i=1; i<m; i++) {
+      string firstPart = curr.substr(0,i);
+      string secondPart = curr.substr(i,m-i);
+
+      if (mp[firstPart] && mp[secondPart]) {
+        cout << "1";
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      cout << "0";
+    }
+  }
+  cout << "\n";
 }
 
 int main() {

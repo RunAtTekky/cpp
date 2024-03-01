@@ -24,6 +24,21 @@ const int MOD = 1e9+7;
 void solve() {
   ll n;
   cin >> n;
+
+  vector<long long> vec(n);
+  for (auto &e: vec) cin >> e;
+  
+  sort(vec.begin(), vec.end());
+
+  ll sum = 0;
+
+  sum += abs(vec[n-1]-vec[0]);
+  sum += abs(vec[n-1]-vec[1]);
+  sum += abs(vec[1]-vec[n-2]);
+  sum += abs(vec[n-2]-vec[0]);
+
+  p(sum);
+
 }
 
 int main() {

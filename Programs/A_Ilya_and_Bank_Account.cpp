@@ -21,16 +21,34 @@ typedef int long long ll;
 const int N = 1e5+5;
 const int MOD = 1e9+7;
 
+int delLast(int n) {
+  return n/10;
+}
+
+int delSecondLast(int n) {
+  int lastDigit = n%10;
+  n /= 10;
+  n = n - n%10;
+  return n+lastDigit;
+}
+
 void solve() {
   ll n;
   cin >> n;
+
+  if (n>=0) {p(n); return;}
+
+  if (n>=-10) {p(0); return;}
+
+  int delLst = delLast(n);
+  int delSecondLst = delSecondLast(n);
+
+  p(max(delLst, delSecondLst));
 }
 
 int main() {
-  cin.sync_with_stdio(0);
-  cin.tie(0);
   int tests = 1;
-  cin >> tests;
+  // cin >> tests;
   while (tests--) solve();
   return 0;
 }

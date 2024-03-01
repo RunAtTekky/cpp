@@ -24,6 +24,13 @@ const int MOD = 1e9+7;
 void solve() {
   ll n;
   cin >> n;
+
+  long long index = 1;
+
+  for (ll i=1; i<=n; i*=2) {
+    index = i;
+  }
+  p(index);
 }
 
 int main() {
