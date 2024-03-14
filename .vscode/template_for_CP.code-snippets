@@ -29,7 +29,7 @@
   ],
   "description": "Sum of digits of a number"
 }
-
+,
 "Factorial of a number": {
   "prefix": "fact",
   "body": [
@@ -43,7 +43,7 @@
   ],
   "description": "Factorial of a number"
 }
-
+,
 "Sum till n natural numbers": {
   "prefix": "nnplusone",
   "body": [
@@ -53,7 +53,7 @@
   ],
   "description": "Sum till n natural numbers"
 }
-
+,
 "codeforces_CP_template": {
   "prefix": "runat",
   "body": [
@@ -87,8 +87,8 @@
     "}",
     "",
     "int main() {",
-    "  cin.sync_with_stdio(0);"
-    "  cin.tie(0);"
+    "  cin.sync_with_stdio(0);",
+    "  cin.tie(0);",
     "  int tests = 1;",
     "  cin >> tests;${1:}",
     "  while (tests--) solve();",
@@ -98,6 +98,7 @@
   ],
   "description": "codeforces_CP_template"
 }
+,
 "minimal_CP_submit": {
   "prefix": "basic",
   "body": [
@@ -117,15 +118,17 @@
   ],
   "description": "minimal_CP_submit"
 }
+,
 "vector input (long long)": {
   "prefix": "vll",
   "body": [
     "vector<long long> vec(n);",
-    "for (auto &e: vec) cin >> e;"
+    "for (auto &e: vec) cin >> e;",
 	""
   ],
   "description": "vector input (long long)"
 }
+,
 "vector print (long long)": {
   "prefix": "vllp",
   "body": [
@@ -135,6 +138,7 @@
   ],
   "description": "vector print (long long)"
 }
+,
 "Maximum_SubArray_Sum_Using_DP": {
   "prefix": "kadane",
   "body": [

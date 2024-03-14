@@ -21,50 +21,42 @@ typedef int long long ll;
 const int N = 1e5+5;
 const int MOD = 1e9+7;
 
-vector<ll> a;
-vector<ll> coins(150);
+void solve() {
+  int ogC;
+  cin >> ogC;
 
-void prec () {
-  
-  a = {1,3,6,10,15};
+  vector<int> multipliers;
 
-  iota(coins.begin(), coins.end(), 0);
-
-  for (int i=0; i<=100; i++) {
-    for (auto x: a) {
-      if (i+x<=100)
-        coins[i+x] = min(coins[i+x], coins[i]+1);
-    }
+  int c = ogC;
+  int pos = 1;
+  while (c>0) {
+    if (c%2 == 0) multipliers.push_back(pos);
+    pos = pos<<1;
+    c = c>>1;
   }
 
-}
+  reverse(multipliers.begin(), multipliers.end());
 
-void solve() {
-  ll n;
-  cin >> n;
+  c = ogC;
+  int a = c;
+  int b = 0;
+  for (auto multiplier : multipliers) {
+    if (c/multiplier >= 1) {b += multiplier; a+= multiplier;}
+    c = c - (c/multiplier)*multiplier;
+  }
 
-  ll totalCoins = 0;
+  if (c == 0 && (a+b == 2*ogC)) {
+    p2(a,b);
+  }
+  else {
+    p(-1);
+  }
 
-  if (n>45) {
-    totalCoins = n/15 - 1;
-
-    n = n - 15*(totalCoins);
-  } 
-  
-
-  totalCoins += coins[n];
-
-  p(totalCoins);
-  
-  
 }
 
 int main() {
   cin.sync_with_stdio(0);
   cin.tie(0);
-  prec();
-  // for (auto &e: coins) cout << e << " ";
-  // cout << "\n";
   int tests = 1;
   cin >> tests;
   while (tests--) solve();

@@ -10,24 +10,26 @@ bool dislikes (int i) {
 }
 
 void pre() {
-  const int max_possible = 10000;
-  for (int i=1; i<max_possible; i++) {
+  const int MAX_POSSIBLE = 10000;
+  for (int i=1; i<MAX_POSSIBLE; i++) {
     if (dislikes(i)) continue;
-
     nums.push_back(i);
   }
 }
 
-void solve() {
-  int k; cin >> k;
-
-  cout << nums[k-1] << "\n";
-}
 
 int main() {
   pre();
+
+  auto solve = [] (int k) {
+    cout << nums[k-1] << "\n";
+  };
+
   int t;
   cin >> t;
-  while (t--) solve();
+  while (t--) {
+    int k; cin >> k;
+    solve(k);
+  }
   return 0;
 }

@@ -21,50 +21,29 @@ typedef int long long ll;
 const int N = 1e5+5;
 const int MOD = 1e9+7;
 
-vector<ll> a;
-vector<ll> coins(150);
-
-void prec () {
-  
-  a = {1,3,6,10,15};
-
-  iota(coins.begin(), coins.end(), 0);
-
-  for (int i=0; i<=100; i++) {
-    for (auto x: a) {
-      if (i+x<=100)
-        coins[i+x] = min(coins[i+x], coins[i]+1);
-    }
-  }
-
-}
-
 void solve() {
   ll n;
   cin >> n;
 
-  ll totalCoins = 0;
+  string s; cin >> s;
 
-  if (n>45) {
-    totalCoins = n/15 - 1;
+  ll cnt = 0;
+  for (int i=0; i+3<=n; i++) {
+    if (s.substr(i,3) == "map" || s.substr(i,3) == "pie") {
+      cnt++;
+    }
+  }
+  ll cnt2 = 0;
+  for (int i=0; i+5<=n; i++) {
+    if (s.substr(i,5) == "mapie") cnt2++;
+  }
 
-    n = n - 15*(totalCoins);
-  } 
-  
-
-  totalCoins += coins[n];
-
-  p(totalCoins);
-  
-  
+  p(cnt-cnt2);
 }
 
 int main() {
   cin.sync_with_stdio(0);
   cin.tie(0);
-  prec();
-  // for (auto &e: coins) cout << e << " ";
-  // cout << "\n";
   int tests = 1;
   cin >> tests;
   while (tests--) solve();
