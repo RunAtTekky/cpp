@@ -155,4 +155,20 @@
   ],
   "description": "Maximum_SubArray_Sum_Using_DP"
 }
+,
+"Sieve of Eratosthenes": {
+  "prefix": "sieve",
+  "body": [
+    "vector<bool> prime(N, true);",
+    "void sieve() {",
+    "  for (int p = 2; p * p <= N; p++) {",
+    "      if (prime[p] == true) {",
+    "          for (int i = p * p; i <= N; i += p)",
+    "              prime[i] = false;",
+    "      }",
+    "  }",
+    "}"
+  ],
+  "description": "Sieve of Eratosthenes"
+}
 }
