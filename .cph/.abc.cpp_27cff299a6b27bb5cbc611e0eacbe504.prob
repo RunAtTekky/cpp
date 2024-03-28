@@ -1,0 +1,1 @@
+{"name":"Local: abc","url":"c:\\Users\\khush\\Varun\\Coding\\cpp\\abc.cpp","tests":[{"id":1711517362213,"input":"wwwaabb\nw3a2b2","output":"w3a2b2\nwwwaabb"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\khush\\Varun\\Coding\\cpp\\abc.cpp","group":"local","local":true}
