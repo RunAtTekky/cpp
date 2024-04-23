@@ -1,7 +1,7 @@
 def solve():
     n = int(input())
     a = [int(x) for x in input().split()]
-    nums = [0 for i in range(N)]
+    nums = [0 * N]
 
     maxi = max(a)
     
