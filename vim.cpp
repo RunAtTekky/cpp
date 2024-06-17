@@ -1,9 +1,8 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-  cout << "ENTER a and b: ";
-  int a,b; cin >> a >> b;
-  cout << __gcd(a,b) << "\n";
+  int a,b;
+  cin >> a >> b;
+  cout << a+b << "\n";
 }
