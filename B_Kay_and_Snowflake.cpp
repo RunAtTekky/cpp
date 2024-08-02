@@ -5,22 +5,24 @@ using namespace std;
 const int N = 3e5+1;
 vector<vector<long long>> children(N);
 vector<long long> sizes(N);
+vector<long long> dpCentroid(N,-1);
 
-void dfs(long long curr, long long par) {
+void dfs(long long curr) {
   long long currSize = 0;
 
   for (auto child: children[curr]) {
-    dfs(child, curr);
+    dfs(child);
     currSize += sizes[child];
   }
 
-  if (children[curr].empty()) sizes[curr] = 0;
+  if (children[curr].empty()) {sizes[curr] = 0; dpCentroid[curr] = curr;}
 
   sizes[curr] = 1 + currSize;
 
 }
 
 long long findCentroid (long long curr, long long root) {
+  if (dpCentroid[root] != -1) return dpCentroid[root];
   bool centroid = true;
   for (auto child : children[curr]) {
     if (sizes[child] > ceil(sizes[root]/2.0)) {
@@ -35,7 +37,10 @@ long long findCentroid (long long curr, long long root) {
     }
   }
 
-  return (centroid) ? curr : -1;
+  if (centroid) {
+    return dpCentroid[root] = curr;
+  }
+  return -1;
 }
 
 void solve() {
@@ -47,12 +52,16 @@ void solve() {
     children[parent].push_back(i);
   }
 
-  dfs(1,-1);
+  dfs(1);
 
   for (int i=0; i<q; i++) {
     long long query; cin >> query;
 
-    cout << findCentroid(query, query) << "\n";
+    long long centroidVal = dpCentroid[query];
+    if (centroidVal != -1) cout << centroidVal << "\n";
+    else {
+      cout << findCentroid(query, query) << "\n";
+    }
   }
 
 }
